@@ -1,5 +1,5 @@
 name: GHOut
-on: push
+on:
   push:
     branches:
       - flowtest
