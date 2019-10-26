@@ -1,7 +1,7 @@
 const fs = require('fs');
 const {join} = require('path');
 
-const rev = '4e49edd6802be4c5238f5dcda5072fd6a54d3c01';
+const rev = '7ffc2e940fa116dca5c05517a002d5d45c54a013';
 const dir = join(__dirname, '.github', 'workflows');
 
 if (!fs.existsSync(dir)) {
