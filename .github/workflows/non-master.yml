@@ -1,7 +1,7 @@
-name: 'Build (master)'
+name: 'Build (non-master)'
 on:
   push:
-    branches: master
+    branches-ignore: master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,9 +29,9 @@ jobs:
           GK_LOCK_GENERIC_CI: 'true'
           GK_LOCK_GENERIC_CI_REPO_SLUG: '${{ github.repository }}'
           GK_LOCK_GENERIC_CI_BRANCH_NAME: '${{ steps.bname.outputs.branchName }}'
-          GK_LOCK_GENERIC_CI_FIRST_PUSH: 'false'
+          GK_LOCK_GENERIC_CI_FIRST_PUSH: 'true'
           GK_LOCK_GENERIC_CI_CORRECT_BUILD: 'true'
-          GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'false'
+          GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'true'
           GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         run: greenkeeper-lockfile-update
       -
@@ -43,8 +43,8 @@ jobs:
           GK_LOCK_GENERIC_CI: 'true'
           GK_LOCK_GENERIC_CI_REPO_SLUG: '${{ github.repository }}'
           GK_LOCK_GENERIC_CI_BRANCH_NAME: '${{ steps.bname.outputs.branchName }}'
-          GK_LOCK_GENERIC_CI_FIRST_PUSH: 'false'
+          GK_LOCK_GENERIC_CI_FIRST_PUSH: 'true'
           GK_LOCK_GENERIC_CI_CORRECT_BUILD: 'true'
-          GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'false'
+          GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'true'
           GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         run: greenkeeper-lockfile-upload

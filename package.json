@@ -5,7 +5,7 @@
   "repository": "git@github.com:Alorel/test-generic-lockfile.git",
   "author": "Arturas Molcanovas <a.molcanovas@gmail.com> (https://github.com/Alorel)",
   "dependencies": {
-    "@alorel-personal/tslint-rules": "5.0.5",
+    "@alorel-personal/tslint-rules": "2.0.0",
     "yamljs": "^0.3.0"
   },
   "license": "MIT"
