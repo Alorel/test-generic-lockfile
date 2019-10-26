@@ -22,7 +22,7 @@ jobs:
           node-version: 12.x
       -
         name: 'Install GK lockfile'
-        run: 'npm install -g github:Alorel/test-generic-lockfile#4e49edd6802be4c5238f5dcda5072fd6a54d3c01'
+        run: 'npm install -g github:Alorel/greenkeeper-lockfile#4e49edd6802be4c5238f5dcda5072fd6a54d3c01'
       -
         name: 'Update GK lockfile'
         env:

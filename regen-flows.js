@@ -51,7 +51,7 @@ function makeVariation(isMaster) {
           },
           {
             name: 'Install GK lockfile',
-            run: `npm install -g github:Alorel/test-generic-lockfile#${rev}`
+            run: `npm install -g github:Alorel/greenkeeper-lockfile#${rev}`
           },
           {
             name: 'Update GK lockfile',
