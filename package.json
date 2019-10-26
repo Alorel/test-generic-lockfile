@@ -1,0 +1,12 @@
+{
+  "name": "test-generic-lockfile",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Alorel/test-generic-lockfile.git",
+  "author": "Arturas Molcanovas <a.molcanovas@gmail.com> (https://github.com/Alorel)",
+  "dependencies": {
+    "@alorel-personal/tslint-rules": "1.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "license": "MIT"
+}
