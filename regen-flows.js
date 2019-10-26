@@ -50,6 +50,10 @@ function makeVariation(isMaster) {
             }
           },
           {
+            name: 'Set default origin',
+            run: 'git config --local checkout.defaultRemote origin'
+          },
+          {
             name: 'Install GK lockfile',
             run: `npm install -g github:Alorel/greenkeeper-lockfile#${rev}`
           },
