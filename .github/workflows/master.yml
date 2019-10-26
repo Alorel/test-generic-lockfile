@@ -24,6 +24,9 @@ jobs:
         name: 'Install GK lockfile'
         run: 'npm install -g github:Alorel/greenkeeper-lockfile#7ffc2e940fa116dca5c05517a002d5d45c54a013'
       -
+        name: 'Set default origin'
+        run: 'git config --local checkout.defaultRemote origin'
+      -
         name: 'Update GK lockfile'
         env:
           GK_LOCK_GENERIC_CI: 'true'
@@ -33,6 +36,7 @@ jobs:
           GK_LOCK_GENERIC_CI_CORRECT_BUILD: 'true'
           GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'false'
           GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          GK_LOCK_COMMIT_AMEND: 'true'
         run: greenkeeper-lockfile-update
       -
         name: 'npm install'
@@ -47,4 +51,5 @@ jobs:
           GK_LOCK_GENERIC_CI_CORRECT_BUILD: 'true'
           GK_LOCK_GENERIC_CI_UPLOAD_BUILD: 'false'
           GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          GK_LOCK_COMMIT_AMEND: 'true'
         run: greenkeeper-lockfile-upload

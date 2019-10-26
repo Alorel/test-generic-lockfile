@@ -16,7 +16,8 @@ function makeVariation(isMaster) {
     GK_LOCK_GENERIC_CI_FIRST_PUSH: isMaster ? 'false' : 'true',
     GK_LOCK_GENERIC_CI_CORRECT_BUILD: 'true',
     GK_LOCK_GENERIC_CI_UPLOAD_BUILD: isMaster ? 'false' : 'true',
-    GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+    GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}',
+    GK_LOCK_COMMIT_AMEND: 'true'
   };
 
   return {
@@ -52,6 +53,10 @@ function makeVariation(isMaster) {
           {
             name: 'Install GK lockfile',
             run: `npm install -g github:Alorel/greenkeeper-lockfile#${rev}`
+          },
+          {
+            name: 'Set default origin',
+            run: 'git config --local checkout.defaultRemote origin'
           },
           {
             name: 'Update GK lockfile',

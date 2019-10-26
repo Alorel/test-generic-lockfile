@@ -6,7 +6,7 @@
   "author": "Arturas Molcanovas <a.molcanovas@gmail.com> (https://github.com/Alorel)",
   "dependencies": {
     "@alorel-personal/tslint-rules": "2.0.0",
-    "@alorel-personal/semantic-release": "1.0.0",
+    "@alorel-personal/semantic-release": "~1.3.0",
     "@alo-tmp/gk-lockfile-generic": "~1.0.0",
     "yamljs": "^0.3.0"
   },
