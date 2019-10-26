@@ -8,6 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Get branch name
+        uses: ./.github/actions/parse-gk-lockfile-vars
+        id: bname
+      - name: Print branch name
+        env:
+          BNAME: ${{ outputs.bname.branchName }}
+        run: echo $BNAME
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
