@@ -15,7 +15,7 @@ jobs:
         id: bname
       - name: Print branch name
         env:
-          BNAME: ${{ outputs.bname.branchName }}
+          BNAME: ${{ steps.bname.outputs.branchName }}
         run: echo $BNAME
       - name: Dump GitHub context
         env:
