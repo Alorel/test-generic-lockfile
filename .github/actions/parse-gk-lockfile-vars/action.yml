@@ -1,0 +1,8 @@
+name: Get branch name
+description: Get branch name from ref
+outputs:
+  branchName:
+    description: Current branch name
+runs:
+  using: node12
+  main: index.js
