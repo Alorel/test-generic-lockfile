@@ -25,7 +25,7 @@ jobs:
         run: 'git config --local checkout.defaultRemote origin'
       -
         name: 'Install GK lockfile'
-        run: 'npm install -g github:Alorel/greenkeeper-lockfile#7ffc2e940fa116dca5c05517a002d5d45c54a013'
+        run: 'npm install -g github:Alorel/greenkeeper-lockfile#390c7def6e8c01989763c2391e66f12f60f9a185'
       -
         name: 'Update GK lockfile'
         env:
