@@ -7,7 +7,7 @@
   "dependencies": {
     "@alorel-personal/tslint-rules": "2.0.0",
     "@alorel-personal/semantic-release": "1.0.0",
-    "@alo-tmp/gk-lockfile-generic": "~1.0.0",
+    "@alo-tmp/gk-lockfile-generic": "~1.1.1",
     "yamljs": "^0.3.0"
   },
   "license": "MIT"
